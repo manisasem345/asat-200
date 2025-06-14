@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Purple Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <div class="search-field d-none d-md-block">
+        </div>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <div class="nav-profile-img">
+                <img src="images/faces/face1.jpg" alt="image">
+                <span class="availability-status online"></span>             
+              </div>
+              <div class="nav-profile-text">
+                <p class="mb-1 text-black">David Greymaax</p>
+              </div>
+            </a>
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="#">
+                <i class="mdi mdi-cached mr-2 text-success"></i>
+                Activity Log
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <i class="mdi mdi-logout mr-2 text-primary"></i>
+                Signout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <a href="#" class="nav-link">
+              <div class="nav-profile-image">
+                <img src="images/faces/face1.jpg" alt="profile">
+                <span class="login-status online"></span>             
+              </div>
+              <div class="nav-profile-text d-flex flex-column">
+                <span class="font-weight-bold mb-2">David Grey. H</span>
+                <span class="text-secondary text-small">Project Manager</span>
+              </div>
+              <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="forms_biodata.html">
+              <span class="menu-title">Biodata</span>
+              <i class="mdi mdi-account-card-details menu-icon"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="forms_contact.html">
+              <span class="menu-title">Contact</span>
+              <i class="mdi mdi mdi-account-multiple menu-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">        
+        <div class="content-wrapper">
+          <div class="page-header">
+            <h3 class="page-title">
+              Form Biodata
+            </h3>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Biodata</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="row">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Add New Biodata</h4>
+                  <p class="card-description">
+                    You can enter new biodata on this form
+                  </p>
+                  <form class="form-sample" action="simpan.php" method="POST" enctype="multipart/form-data" id="biodataForm">
+                    <p class="card-description">
+                      Personal info
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">First Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="nama_depan" name="nama_depan" placeholder="example: Devano" required />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Last Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="nama_belakang" name="nama_belakang" placeholder="example: Roni Murdian" required />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">About</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" id="tantang" name="tantang" rows="3" placeholder="example: I am a web and mobile programmer"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Profession</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="profesi" name="profesi" placeholder="example: Fullstack Developer" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Profession Description</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" id="deskripsi_profesi" name="deskripsi_profesi" rows="3"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Date of Birth</label>
+                          <div class="col-sm-9">
+                            <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Website</label>
+                          <div class="col-sm-9">
+                            <input type="url" class="form-control" id="website" name="website" placeholder="https://example.com" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Major</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="gelar" name="gelar" placeholder="example: S.Kom" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Phone Number</label>
+                          <div class="col-sm-9">
+                            <input type="tel" class="form-control" id="hp" name="hp" placeholder="08xxxxxxxxxx" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Email</label>
+                          <div class="col-sm-9">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">City</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="kota" name="kota" placeholder="example: Jakarta" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Freelance</label>
+                          <div class="col-sm-4">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="freelance" id="freelance_yes" value="1">
+                                Yes
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-sm-5">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="freelance" id="freelance_no" value="0" checked>
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Information About</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" id="keterangan_about" name="keterangan_about" rows="3"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Information Skill</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" id="keterangan_skill" name="keterangan_skill" rows="3"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Skill</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control" id="skill" name="skill" rows="3" placeholder="PHP, JavaScript, HTML, CSS"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-5">
+                      <div class="input-group row">
+                        <label class="col-sm-4 col-form-label">Hero Image</label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                            <input type="file" class="d-none file-upload-default" id="url_hero" name="url_hero" accept="image/*">
+                            <div class="input-group-append">
+                              <label for="url_hero" class="btn btn-gradient-primary mb-0" style="cursor: pointer;">Upload</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                      
+                      <div class="form-group col-md-5">
+                      <div class="input-group row">
+                        <label class="col-sm-4 col-form-label">Photo</label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                            <input type="file" class="d-none" id="url_foto" name="url_foto" accept="image/*">
+                            <div class="input-group-append">
+                              <label for="url_foto" class="btn btn-gradient-primary mb-0" style="cursor: pointer;">Upload</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      
+                      </div>               
+                    <div class="row mt-4">
+                      <div class="col-12">
+                        <button type="button" class="btn btn-light mr-2" onclick="resetForm()">Cancel</button>
+                        <button type="submit" class="btn btn-gradient-primary">Save</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap Dash</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- Hidden field for message -->
+  <input type="hidden" id="psn" value=" <?php if(isset($_GET['pesan'])) echo $_GET['pesan']; ?>">
+
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <script src="../../vendors/js/vendor.bundle.addons.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/misc.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/file-upload.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- End custom js for this page-->
+
+  <script>
+    const psn = document.getElementById('psn');
+    
+    function resetForm() {
+      document.getElementById('biodataForm').reset();
+    }
+
+
+    window.onload = function() {
+      if(psn.value === "sukses"){
+        Swal.fire("Berhasil Disimpan", "Data biodata berhasil disimpan ke database!", "success");
+      } else if(psn.value === "error"){
+        Swal.fire("Gagal Disimpan", "Terjadi kesalahan saat menyimpan data!", "error");
+      } else if(psn.value === "upload_error"){
+        Swal.fire("Error Upload", "Gagal mengupload file gambar!", "error");
+      }
+    }
+
+    document.getElementById('biodataForm').addEventListener('submit', function(e) {
+      const namaDepan = document.getElementById('nama_depan').value;
+      const namaBelakang = document.getElementById('nama_belakang').value;
+      
+      if(!namaDepan.trim()) {
+        e.preventDefault();
+        Swal.fire("Data tidak valid", "Nama depan harus diisi!", "error");
+        document.getElementById('nama_depan').focus();
+        return false;
+      }
+      
+      if(!namaBelakang.trim()) {
+        e.preventDefault();
+        Swal.fire("Data tidak valid", "Nama belakang harus diisi!", "error");
+        document.getElementById('nama_belakang').focus();
+        return false;
+      }
+    });
+  </script>
+</body>
+
+</html>
